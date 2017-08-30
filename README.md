@@ -9,7 +9,7 @@ Requirements:
 - NetCat (nc) on remote device
 
 Here is how I loaded this in my /etc/rc.local file to run at boot time:
-
+<pre>
 (
 until ping -nq -c3 8.8.8.8; do
   sleep 5
@@ -17,3 +17,4 @@ done
 #
 /bin/bash /root/callback.sh
 )&
+</pre>
