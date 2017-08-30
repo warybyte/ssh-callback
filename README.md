@@ -9,11 +9,7 @@ Requirements:
 - NetCat (nc) on remote device
 
 Here is how I loaded this in my /etc/rc.local file to run at boot time:
-...
-# ----------------------------------------------------------
-# This is a PoC callback script...
-# ----------------------------------------------------------
-# wait for network connection to establish before call back
+
 (
 until ping -nq -c3 8.8.8.8; do
   sleep 5
@@ -21,6 +17,3 @@ done
 #
 /bin/bash /root/callback.sh
 )&
-# END
-# ----------------------------------------------------------
-...
